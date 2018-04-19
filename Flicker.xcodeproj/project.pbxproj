@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D207E22D9C65F7802F0872C /* Pods_Flicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1A6F6EB6DFC69E7C2249E8B /* Pods_Flicker.framework */; };
+		D00F4F6020887E0600AB8310 /* ArticleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00F4F5F20887E0600AB8310 /* ArticleVC.swift */; };
+		D00F4F6220887E1A00AB8310 /* ArticleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00F4F6120887E1A00AB8310 /* ArticleVM.swift */; };
+		D00F4F642088856F00AB8310 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00F4F632088856F00AB8310 /* ArticleModel.swift */; };
+		D00F4F682088A93200AB8310 /* ArticleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00F4F672088A93200AB8310 /* ArticleDetailVC.swift */; };
+		D0217E1C20875704004C2C71 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0217E1B20875704004C2C71 /* LocationModel.swift */; };
+		D04319E72088E26E00294834 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04319E62088E26E00294834 /* NoteVC.swift */; };
+		D043DDFF208276E80045C26D /* WordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043DDFE208276E80045C26D /* WordVM.swift */; };
+		D08340A8208717AF00922A96 /* WordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08340A7208717AF00922A96 /* WordVC.swift */; };
+		D095013C2086C0CA00926AA9 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095013B2086C0CA00926AA9 /* MainVM.swift */; };
+		D095013E2086C0DC00926AA9 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095013D2086C0DC00926AA9 /* NoteModel.swift */; };
+		D09501402086DE8D00926AA9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095013F2086DE8D00926AA9 /* Color.swift */; };
 		D0DB9DA4207D8F0C00E8C231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9DA3207D8F0C00E8C231 /* AppDelegate.swift */; };
-		D0DB9DA6207D8F0C00E8C231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9DA5207D8F0C00E8C231 /* ViewController.swift */; };
+		D0DB9DA6207D8F0C00E8C231 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9DA5207D8F0C00E8C231 /* MainVC.swift */; };
 		D0DB9DA9207D8F0C00E8C231 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DB9DA7207D8F0C00E8C231 /* Main.storyboard */; };
 		D0DB9DAB207D8F0D00E8C231 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DB9DAA207D8F0D00E8C231 /* Assets.xcassets */; };
 		D0DB9DAE207D8F0D00E8C231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DB9DAC207D8F0D00E8C231 /* LaunchScreen.storyboard */; };
@@ -34,9 +46,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3534C401785207224E7EA6F5 /* Pods-Flicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicker/Pods-Flicker.debug.xcconfig"; sourceTree = "<group>"; };
+		6019B0D0E866BE4E95DFB652 /* Pods-Flicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flicker/Pods-Flicker.release.xcconfig"; sourceTree = "<group>"; };
+		D00F4F5F20887E0600AB8310 /* ArticleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVC.swift; sourceTree = "<group>"; };
+		D00F4F6120887E1A00AB8310 /* ArticleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVM.swift; sourceTree = "<group>"; };
+		D00F4F632088856F00AB8310 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		D00F4F672088A93200AB8310 /* ArticleDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailVC.swift; sourceTree = "<group>"; };
+		D0217E1B20875704004C2C71 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		D04319E62088E26E00294834 /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
+		D043DDFE208276E80045C26D /* WordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordVM.swift; sourceTree = "<group>"; };
+		D08340A7208717AF00922A96 /* WordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordVC.swift; sourceTree = "<group>"; };
+		D095013B2086C0CA00926AA9 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		D095013D2086C0DC00926AA9 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		D095013F2086DE8D00926AA9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D0DB9DA0207D8F0C00E8C231 /* Flicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DB9DA3207D8F0C00E8C231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0DB9DA5207D8F0C00E8C231 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0DB9DA5207D8F0C00E8C231 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D0DB9DA8207D8F0C00E8C231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0DB9DAA207D8F0D00E8C231 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0DB9DAD207D8F0D00E8C231 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +72,7 @@
 		D0DB9DBF207D8F0D00E8C231 /* FlickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DB9DC3207D8F0D00E8C231 /* FlickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerUITests.swift; sourceTree = "<group>"; };
 		D0DB9DC5207D8F0D00E8C231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1A6F6EB6DFC69E7C2249E8B /* Pods_Flicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D207E22D9C65F7802F0872C /* Pods_Flicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +101,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B48CAAF8E7335B783C610A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3534C401785207224E7EA6F5 /* Pods-Flicker.debug.xcconfig */,
+				6019B0D0E866BE4E95DFB652 /* Pods-Flicker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC7848F4AECCE980BB460B48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1A6F6EB6DFC69E7C2249E8B /* Pods_Flicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D09501372086BFE600926AA9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB9DA5207D8F0C00E8C231 /* MainVC.swift */,
+				D08340A7208717AF00922A96 /* WordVC.swift */,
+				D00F4F5F20887E0600AB8310 /* ArticleVC.swift */,
+				D00F4F672088A93200AB8310 /* ArticleDetailVC.swift */,
+				D04319E62088E26E00294834 /* NoteVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D09501382086BFEE00926AA9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D043DDFE208276E80045C26D /* WordVM.swift */,
+				D095013B2086C0CA00926AA9 /* MainVM.swift */,
+				D00F4F6120887E1A00AB8310 /* ArticleVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D09501392086C00600926AA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D095013D2086C0DC00926AA9 /* NoteModel.swift */,
+				D0217E1B20875704004C2C71 /* LocationModel.swift */,
+				D00F4F632088856F00AB8310 /* ArticleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D095013A2086C00E00926AA9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D095013F2086DE8D00926AA9 /* Color.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		D0DB9D97207D8F0C00E8C231 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +165,8 @@
 				D0DB9DB7207D8F0D00E8C231 /* FlickerTests */,
 				D0DB9DC2207D8F0D00E8C231 /* FlickerUITests */,
 				D0DB9DA1207D8F0C00E8C231 /* Products */,
+				4B48CAAF8E7335B783C610A4 /* Pods */,
+				AC7848F4AECCE980BB460B48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,7 +184,10 @@
 			isa = PBXGroup;
 			children = (
 				D0DB9DA3207D8F0C00E8C231 /* AppDelegate.swift */,
-				D0DB9DA5207D8F0C00E8C231 /* ViewController.swift */,
+				D095013A2086C00E00926AA9 /* Util */,
+				D09501392086C00600926AA9 /* Model */,
+				D09501382086BFEE00926AA9 /* ViewModel */,
+				D09501372086BFE600926AA9 /* ViewController */,
 				D0DB9DA7207D8F0C00E8C231 /* Main.storyboard */,
 				D0DB9DAA207D8F0D00E8C231 /* Assets.xcassets */,
 				D0DB9DAC207D8F0D00E8C231 /* LaunchScreen.storyboard */,
@@ -132,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0DB9DC8207D8F0E00E8C231 /* Build configuration list for PBXNativeTarget "Flicker" */;
 			buildPhases = (
+				31CB98DF9CF40E6D4A93646E /* [CP] Check Pods Manifest.lock */,
 				D0DB9D9C207D8F0C00E8C231 /* Sources */,
 				D0DB9D9D207D8F0C00E8C231 /* Frameworks */,
 				D0DB9D9E207D8F0C00E8C231 /* Resources */,
+				BBACFA845659C03F6412B086 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,13 +342,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31CB98DF9CF40E6D4A93646E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBACFA845659C03F6412B086 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Flicker/Pods-Flicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealmDataSources/RxRealmDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kanna.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealmDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flicker/Pods-Flicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D0DB9D9C207D8F0C00E8C231 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0DB9DA6207D8F0C00E8C231 /* ViewController.swift in Sources */,
+				D00F4F682088A93200AB8310 /* ArticleDetailVC.swift in Sources */,
+				D04319E72088E26E00294834 /* NoteVC.swift in Sources */,
+				D00F4F642088856F00AB8310 /* ArticleModel.swift in Sources */,
+				D0217E1C20875704004C2C71 /* LocationModel.swift in Sources */,
+				D095013E2086C0DC00926AA9 /* NoteModel.swift in Sources */,
+				D043DDFF208276E80045C26D /* WordVM.swift in Sources */,
+				D0DB9DA6207D8F0C00E8C231 /* MainVC.swift in Sources */,
+				D08340A8208717AF00922A96 /* WordVC.swift in Sources */,
 				D0DB9DA4207D8F0C00E8C231 /* AppDelegate.swift in Sources */,
+				D095013C2086C0CA00926AA9 /* MainVM.swift in Sources */,
+				D00F4F6020887E0600AB8310 /* ArticleVC.swift in Sources */,
+				D09501402086DE8D00926AA9 /* Color.swift in Sources */,
+				D00F4F6220887E1A00AB8310 /* ArticleVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,37 +585,41 @@
 		};
 		D0DB9DC9207D8F0E00E8C231 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3534C401785207224E7EA6F5 /* Pods-Flicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W3868KR87Z;
+				DEVELOPMENT_TEAM = Z25H7B85Z8;
 				INFOPLIST_FILE = Flicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "W-Vertex.Flicker";
+				PRODUCT_BUNDLE_IDENTIFIER = WVertex.Flicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D0DB9DCA207D8F0E00E8C231 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6019B0D0E866BE4E95DFB652 /* Pods-Flicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W3868KR87Z;
+				DEVELOPMENT_TEAM = Z25H7B85Z8;
 				INFOPLIST_FILE = Flicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "W-Vertex.Flicker";
+				PRODUCT_BUNDLE_IDENTIFIER = WVertex.Flicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
