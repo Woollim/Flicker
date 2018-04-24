@@ -41,7 +41,7 @@ class ArticleVM{
     }
     
     private func getRequest() -> URLRequest{
-        let requestLink = "https://openapi.naver.com/v1/search/encyc.json?start=\(count)&query="
+        let requestLink = "https://openapi.naver.com/v1/search/news.json?start=\(count)&query="
         let encodead = (requestLink + word).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         var request = URLRequest(url: URL(string: encodead)!)
         request.httpMethod = "GET"

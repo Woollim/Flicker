@@ -61,7 +61,7 @@ extension WordVC{
     }
     
     private func goNextView(_ text: String){
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ArticleVC") as! ArticleVC
+        let vc = storyboard?.instantiateViewController(withIdentifier: "NoteVC") as! NoteVC
         vc.word = text
         navigationController?.pushViewController(vc, animated: true)
     }

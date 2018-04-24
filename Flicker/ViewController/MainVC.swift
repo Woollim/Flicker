@@ -36,18 +36,36 @@ class MainVC: UITableViewController {
 
 extension MainVC{
     
-    func showAlert(){
+    private func showAlert(){
         let alert = UIAlertController(title: "노트 유형을 선택해주세요", message: nil, preferredStyle: .actionSheet)
         alert.view.tintColor = Color.main.getColor()
         alert.setAction("번뜩 노트", style: .default){ _ in self.goWordVC() }
-        alert.setAction("사용자 입력 노트", style: .default){ _ in  }
+        alert.setAction("사용자 입력 노트", style: .default){ _ in self.goNoteVC() }
+        alert.setAction("취소", style: .cancel)
+        present(alert, animated: true)
+    }
+    
+    private func goNoteVC(){
+        let alert = UIAlertController(title: "핵심 단어를 입력해주세요.", message: nil, preferredStyle: .alert)
+        alert.view.tintColor = Color.main.getColor()
+        alert.addTextField(configurationHandler: nil)
+        alert.setAction("입력완료", style: .default){ _ in
+            let textField = alert.textFields![0]
+            let vc = self.goNextView("NoteVC") as! NoteVC
+            vc.word = textField.text!
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         alert.setAction("취소", style: .cancel)
         present(alert, animated: true)
     }
     
     private func goWordVC(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "WordVC")
-        navigationController?.pushViewController(vc!, animated: true)
+        self.navigationController?.pushViewController(goNextView("WordVC"), animated: true)
+    }
+    
+    private func goNextView(_ id: String) -> UIViewController{
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: id)
+        return vc!
     }
     
 }
@@ -55,7 +73,18 @@ extension MainVC{
 extension MainVC{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return initDataArr.count
+        let count = initDataArr.count
+        if count == 0 {
+            let view = EmptyView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: tableView.frame.height))
+            view.clickFunc = showAlert
+            tableView.backgroundView = view
+            tableView.separatorStyle = .none
+            return 0
+        }else{
+            tableView.backgroundView = nil
+            tableView.separatorStyle = .singleLine
+            return count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,6 +93,12 @@ extension MainVC{
         cell.setTitle(data.word)
         cell.shortDescLabel.text = data.shortDesc
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = goNextView("NoteVC") as! NoteVC
+        vc.data = initDataArr[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

@@ -15,6 +15,7 @@
 		D0217E1C20875704004C2C71 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0217E1B20875704004C2C71 /* LocationModel.swift */; };
 		D04319E72088E26E00294834 /* NoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04319E62088E26E00294834 /* NoteVC.swift */; };
 		D043DDFF208276E80045C26D /* WordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043DDFE208276E80045C26D /* WordVM.swift */; };
+		D0659A27208EAD8400C3B951 /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0659A26208EAD8400C3B951 /* PlaceHolderTextView.swift */; };
 		D08340A8208717AF00922A96 /* WordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08340A7208717AF00922A96 /* WordVC.swift */; };
 		D095013C2086C0CA00926AA9 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095013B2086C0CA00926AA9 /* MainVM.swift */; };
 		D095013E2086C0DC00926AA9 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D095013D2086C0DC00926AA9 /* NoteModel.swift */; };
@@ -26,6 +27,8 @@
 		D0DB9DAE207D8F0D00E8C231 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DB9DAC207D8F0D00E8C231 /* LaunchScreen.storyboard */; };
 		D0DB9DB9207D8F0D00E8C231 /* FlickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9DB8207D8F0D00E8C231 /* FlickerTests.swift */; };
 		D0DB9DC4207D8F0D00E8C231 /* FlickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB9DC3207D8F0D00E8C231 /* FlickerUITests.swift */; };
+		D0EC3726208ED255005AFCBB /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC3725208ED255005AFCBB /* EmptyView.swift */; };
+		D0EC3729208ED3AE005AFCBB /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EC3728208ED3AE005AFCBB /* EmptyView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,7 @@
 		D0217E1B20875704004C2C71 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		D04319E62088E26E00294834 /* NoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVC.swift; sourceTree = "<group>"; };
 		D043DDFE208276E80045C26D /* WordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordVM.swift; sourceTree = "<group>"; };
+		D0659A26208EAD8400C3B951 /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		D08340A7208717AF00922A96 /* WordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordVC.swift; sourceTree = "<group>"; };
 		D095013B2086C0CA00926AA9 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		D095013D2086C0DC00926AA9 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		D0DB9DBF207D8F0D00E8C231 /* FlickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DB9DC3207D8F0D00E8C231 /* FlickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerUITests.swift; sourceTree = "<group>"; };
 		D0DB9DC5207D8F0D00E8C231 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0EC3725208ED255005AFCBB /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		D0EC3728208ED3AE005AFCBB /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		E1A6F6EB6DFC69E7C2249E8B /* Pods_Flicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				D095013F2086DE8D00926AA9 /* Color.swift */,
+				D0659A26208EAD8400C3B951 /* PlaceHolderTextView.swift */,
+				D0EC3725208ED255005AFCBB /* EmptyView.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -184,13 +192,12 @@
 			isa = PBXGroup;
 			children = (
 				D0DB9DA3207D8F0C00E8C231 /* AppDelegate.swift */,
+				D0EC3727208ED390005AFCBB /* UI */,
 				D095013A2086C00E00926AA9 /* Util */,
 				D09501392086C00600926AA9 /* Model */,
 				D09501382086BFEE00926AA9 /* ViewModel */,
 				D09501372086BFE600926AA9 /* ViewController */,
-				D0DB9DA7207D8F0C00E8C231 /* Main.storyboard */,
 				D0DB9DAA207D8F0D00E8C231 /* Assets.xcassets */,
-				D0DB9DAC207D8F0D00E8C231 /* LaunchScreen.storyboard */,
 				D0DB9DAF207D8F0D00E8C231 /* Info.plist */,
 			);
 			path = Flicker;
@@ -212,6 +219,16 @@
 				D0DB9DC5207D8F0D00E8C231 /* Info.plist */,
 			);
 			path = FlickerUITests;
+			sourceTree = "<group>";
+		};
+		D0EC3727208ED390005AFCBB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D0DB9DA7207D8F0C00E8C231 /* Main.storyboard */,
+				D0DB9DAC207D8F0D00E8C231 /* LaunchScreen.storyboard */,
+				D0EC3728208ED3AE005AFCBB /* EmptyView.xib */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EC3729208ED3AE005AFCBB /* EmptyView.xib in Resources */,
 				D0DB9DAE207D8F0D00E8C231 /* LaunchScreen.storyboard in Resources */,
 				D0DB9DAB207D8F0D00E8C231 /* Assets.xcassets in Resources */,
 				D0DB9DA9207D8F0C00E8C231 /* Main.storyboard in Resources */,
@@ -374,8 +392,8 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRealmDataSources/RxRealmDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -386,8 +404,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealmDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D00F4F682088A93200AB8310 /* ArticleDetailVC.swift in Sources */,
+				D0EC3726208ED255005AFCBB /* EmptyView.swift in Sources */,
 				D04319E72088E26E00294834 /* NoteVC.swift in Sources */,
 				D00F4F642088856F00AB8310 /* ArticleModel.swift in Sources */,
 				D0217E1C20875704004C2C71 /* LocationModel.swift in Sources */,
@@ -413,6 +432,7 @@
 				D0DB9DA4207D8F0C00E8C231 /* AppDelegate.swift in Sources */,
 				D095013C2086C0CA00926AA9 /* MainVM.swift in Sources */,
 				D00F4F6020887E0600AB8310 /* ArticleVC.swift in Sources */,
+				D0659A27208EAD8400C3B951 /* PlaceHolderTextView.swift in Sources */,
 				D09501402086DE8D00926AA9 /* Color.swift in Sources */,
 				D00F4F6220887E1A00AB8310 /* ArticleVM.swift in Sources */,
 			);

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyView" customModule="Flicker" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="KTI-x3-uge" id="FuC-Ik-AbH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="EmptyView" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="24E-Gg-Tqs">
+                    <rect key="frame" x="119" y="352" width="137.5" height="59.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="노트가 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2P7-JP-5vL">
+                            <rect key="frame" x="0.0" y="0.0" width="137.5" height="25.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTI-x3-uge">
+                            <rect key="frame" x="0.0" y="25.5" width="137.5" height="34"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="지금 노트 쓰기">
+                                <color key="titleColor" red="0.95686274510000002" green="0.61960784310000006" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YellowIcon" translatesAutoresizingMaskIntoConstraints="NO" id="S4u-eh-mGO">
+                    <rect key="frame" x="123.5" y="208" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="We7-s9-UXr"/>
+                        <constraint firstAttribute="width" constant="128" id="ii3-SS-W52"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="24E-Gg-Tqs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5oa-eA-0zn"/>
+                <constraint firstItem="S4u-eh-mGO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8Jc-bP-a9L"/>
+                <constraint firstItem="24E-Gg-Tqs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="48" id="Hk5-Zy-r4b"/>
+                <constraint firstItem="24E-Gg-Tqs" firstAttribute="top" secondItem="S4u-eh-mGO" secondAttribute="bottom" constant="16" id="XIG-da-gZF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="70.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="YellowIcon" width="514" height="514"/>
+    </resources>
+</document>

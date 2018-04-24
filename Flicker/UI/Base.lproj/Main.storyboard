@@ -86,7 +86,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mow-tR-8Df">
-                                <rect key="frame" x="122.5" y="605" width="129" height="30"/>
+                                <rect key="frame" x="123" y="605" width="129" height="30"/>
                                 <state key="normal" title="&quot;번뜩&quot; 단어 다시 받기"/>
                                 <connections>
                                     <action selector="reload" destination="BYZ-38-t0r" eventType="touchUpInside" id="ond-tQ-6QL"/>
@@ -138,25 +138,97 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xk-fj-Wv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466" y="242"/>
+            <point key="canvasLocation" x="2484" y="242"/>
         </scene>
-        <!--Article DetailVC-->
+        <!--NoteVC-->
         <scene sceneID="nya-mZ-qT1">
             <objects>
-                <viewController storyboardIdentifier="ArticleDetailVC" id="QZV-8E-78I" customClass="ArticleDetailVC" customModule="Flicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteVC" id="QZV-8E-78I" customClass="NoteVC" customModule="Flicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xbw-EQ-9GB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;핵심 단어&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="430-ek-bOE">
+                                <rect key="frame" x="16" y="36" width="120" height="31.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.95686274510000002" green="0.61960784310000006" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssM-8b-HpT">
+                                <rect key="frame" x="273" y="40.5" width="86" height="30"/>
+                                <state key="normal" title="관련 기사 보기"/>
+                                <connections>
+                                    <action selector="showArticle" destination="QZV-8E-78I" eventType="touchUpInside" id="aYA-al-C6q"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="YjH-S6-ZYE">
+                                <rect key="frame" x="16" y="83.5" width="343" height="57.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한 줄 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwG-t0-LYO">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wcz-HL-KDQ">
+                                        <rect key="frame" x="0.0" y="27.5" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Wcz-HL-KDQ" firstAttribute="leading" secondItem="YjH-S6-ZYE" secondAttribute="leading" id="8eq-RN-PRW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wcz-HL-KDQ" secondAttribute="trailing" id="KH6-05-VDD"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="Dpu-BY-YIG" customClass="PlaceHolderTextView" customModule="Flicker" customModuleProvider="target">
+                                <rect key="frame" x="16" y="157" width="343" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyl-sT-wmd">
+                                <rect key="frame" x="339" y="631" width="32" height="32"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.61960784310000006" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="LhX-vP-gTE"/>
+                                    <constraint firstAttribute="width" constant="32" id="oAj-G5-azD"/>
+                                </constraints>
+                                <state key="normal" image="KeyboardHideIcon"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ssM-8b-HpT" firstAttribute="baseline" secondItem="430-ek-bOE" secondAttribute="baseline" id="0VC-8h-j8B"/>
+                            <constraint firstItem="7vP-EJ-0Mc" firstAttribute="trailing" secondItem="ssM-8b-HpT" secondAttribute="trailing" constant="16" id="3D0-As-AJO"/>
+                            <constraint firstItem="430-ek-bOE" firstAttribute="top" secondItem="7vP-EJ-0Mc" secondAttribute="top" constant="16" id="Axz-kh-0m0"/>
+                            <constraint firstItem="430-ek-bOE" firstAttribute="leading" secondItem="7vP-EJ-0Mc" secondAttribute="leading" constant="16" id="Dwr-0f-Aqc"/>
+                            <constraint firstItem="7vP-EJ-0Mc" firstAttribute="bottom" secondItem="Dpu-BY-YIG" secondAttribute="bottom" constant="16" id="Gt9-de-6vd"/>
+                            <constraint firstItem="7vP-EJ-0Mc" firstAttribute="trailing" secondItem="Dpu-BY-YIG" secondAttribute="trailing" constant="16" id="LHh-NV-Sbg"/>
+                            <constraint firstItem="YjH-S6-ZYE" firstAttribute="top" secondItem="430-ek-bOE" secondAttribute="bottom" constant="16" id="Nt9-Ol-f53"/>
+                            <constraint firstItem="Dpu-BY-YIG" firstAttribute="top" secondItem="YjH-S6-ZYE" secondAttribute="bottom" constant="16" id="Uxk-dm-Pgg"/>
+                            <constraint firstItem="YjH-S6-ZYE" firstAttribute="leading" secondItem="7vP-EJ-0Mc" secondAttribute="leading" constant="16" id="Xwl-YT-1E5"/>
+                            <constraint firstItem="7vP-EJ-0Mc" firstAttribute="bottom" secondItem="nyl-sT-wmd" secondAttribute="bottom" constant="4" id="enI-yv-7HK"/>
+                            <constraint firstItem="7vP-EJ-0Mc" firstAttribute="trailing" secondItem="YjH-S6-ZYE" secondAttribute="trailing" constant="16" id="gFn-EQ-zZG"/>
+                            <constraint firstItem="Dpu-BY-YIG" firstAttribute="leading" secondItem="7vP-EJ-0Mc" secondAttribute="leading" constant="16" id="mQC-kJ-BLB"/>
+                            <constraint firstItem="7vP-EJ-0Mc" firstAttribute="trailing" secondItem="nyl-sT-wmd" secondAttribute="trailing" constant="4" id="tAV-al-yyu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7vP-EJ-0Mc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="lMM-Px-Vse">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="you-yy-7IE"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="lMM-Px-Vse"/>
+                    <connections>
+                        <outlet property="bottomHeightConstraint" destination="Gt9-de-6vd" id="5c8-F2-sAm"/>
+                        <outlet property="buttonConstraint" destination="enI-yv-7HK" id="1Eg-zd-SIa"/>
+                        <outlet property="hideKeyboardButton" destination="nyl-sT-wmd" id="gUR-PA-PG5"/>
+                        <outlet property="keywordTextField" destination="Wcz-HL-KDQ" id="3h1-my-Itu"/>
+                        <outlet property="textView" destination="Dpu-BY-YIG" id="iKI-Vz-K3K"/>
+                        <outlet property="wordLabel" destination="430-ek-bOE" id="lIb-0E-RCX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oJ-uB-xzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4295" y="242"/>
+            <point key="canvasLocation" x="1417" y="1041"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="506-gc-FiT">
@@ -177,5 +249,8 @@
             <point key="canvasLocation" x="-546" y="242"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="KeyboardHideIcon" width="24" height="24"/>
+    </resources>
     <color key="tintColor" red="0.95686274510000002" green="0.61960784310000006" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

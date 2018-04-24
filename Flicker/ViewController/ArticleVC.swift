@@ -28,10 +28,12 @@ class ArticleVC: UITableViewController {
     }
     
     @objc func reloadData(){
-        _ = Observable.range(start: 0, count: dataArr.count)
-            .subscribe(onNext: { [unowned self] _ in
-                self.dataArr.remove(at: 0)
-                let index = IndexPath(row: 0, section: 0)
+        _ = Observable<Int>.interval(0.01, scheduler: MainScheduler.instance)
+            .take(self.dataArr.count)
+            .map{ _ -> Int in return 0 }
+            .subscribe(onNext: { [unowned self] num in
+                self.dataArr.remove(at: num)
+                let index = IndexPath(row: num, section: 0)
                 self.tableView.deleteRows(at: [index], with: .automatic)
             })
         vm.reloadData()
