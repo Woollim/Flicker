@@ -11,6 +11,7 @@ import UIKit
 import RxSwift
 import RxAlamofire
 import Kanna
+import Moya
 
 class WordVM{
     
@@ -29,16 +30,27 @@ class WordVM{
     }
     
     private func initLoadData(){
-        _ = request(.get, URL(string: url)!)
-            .observeOn(ConcurrentMainScheduler.instance).responseString()
-            .single()
-            .filter{ (res, _) in res.statusCode == 200 }
-            .map{ (_, str) in str }
+        _ = MoyaProvider<API>().rx.request(.getWords)
+            .filter(statusCode: 200)
+            .map{ $0.data }
             .map{ try! HTML(html: $0, encoding: .utf8) }
             .map{ $0.css("table.prettytable :first-child dd") }
-            .subscribe(onNext: { [unowned self] data in
-                self.dataArr = data.makeIterator().map{ $0.content! }
-                }, onDisposed: { [unowned self] in self.getData() })
+            .asObservable()
+            .subscribe(onNext: { [weak self] data in
+                self?.dataArr = data.makeIterator().map{ $0.content! }
+                }, onDisposed: { [weak self] in self?.getData() })
+        
+        
+//        _ = request(.get, URL(string: url)!)
+//            .observeOn(ConcurrentMainScheduler.instance).responseString()
+//            .single()
+//            .filter{ (res, _) in res.statusCode == 200 }
+//            .map{ (_, str) in str }
+//            .map{ try! HTML(html: $0, encoding: .utf8) }
+//            .map{ $0.css("table.prettytable :first-child dd") }
+//            .subscribe(onNext: { [unowned self] data in
+//                self.dataArr = data.makeIterator().map{ $0.content! }
+//                }, onDisposed: { [unowned self] in self.getData() })
     }
     
     func setViewSize(_ size: CGSize){
