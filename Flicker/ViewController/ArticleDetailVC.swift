@@ -28,17 +28,20 @@ class ArticleDetailVC: UIViewController {
     }
     
     private func setWebView(){
-        let frame = view.safeAreaLayoutGuide.layoutFrame
+        var frame = view.safeAreaLayoutGuide.layoutFrame
+        frame.size.height += view.safeAreaInsets.bottom
         webView = UIWebView(frame: frame)
         view.addSubview(webView)
         setTitle("로딩 중입니다.")
         _ = webView.rx.didFinishLoad
             .map{"로딩 완료!"}
-            .subscribe(onNext: { [unowned self] in self.setTitle($0) })
+            .subscribe(onNext: { [unowned self] in
+                self.setTitle($0)
+            })
     }
     
     private func setTitle(_ text: String){
-        navigationController?.title = text
+        navigationItem.title = text
     }
 
 }

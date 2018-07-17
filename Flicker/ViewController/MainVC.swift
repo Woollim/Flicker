@@ -87,6 +87,10 @@ extension MainVC{
         }
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 82
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = initDataArr[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath) as! MainCell
@@ -106,10 +110,6 @@ extension MainVC{
             _ = Observable.just(initDataArr[indexPath.row])
                 .bind(to: Realm.rx.delete())
         }
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 82
     }
     
 }
