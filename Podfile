@@ -5,8 +5,9 @@ target 'Flicker' do
   use_frameworks!
   pod 'RxRealm'
   pod 'RxAlamofire'
-  pod "RxSwift"
+  pod 'RxSwift'
   pod 'RxKeyboard'
-  pod "RxCocoa"
+  pod 'RxCocoa'
   pod 'Kanna'
+  pod 'Moya/RxSwift'
 end
