@@ -11,10 +11,12 @@ import RxSwift
 import RxCocoa
 import Kanna
 import Moya
+import RxMoya
 import RxAlamofire
 
 class ArticleVM{
     
+    private let provider = MoyaProvider<API>()
     private let word: String
     let subject: PublishRelay<ArticleModel>
     private var count = 1
@@ -31,7 +33,7 @@ class ArticleVM{
     }
     
     private func loadData(){
-        _ = MoyaProvider<API>().rx.request(.getNews(word: word, count: count))
+        _ = provider.rx.request(.getNews(word: word, count: count))
             .do(onSuccess: { _ in print("success") }, onError: { _ in print("err") }, onSubscribe: { print("subscribe") }, onSubscribed: { print("ed") }, onDispose: { print("dispose") })
             .filter(statusCode: 200)
             .map(ArticleListModel.self)

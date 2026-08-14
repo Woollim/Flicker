@@ -19,16 +19,18 @@ class ArticleVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         vm = ArticleVM(word)
-        vm.subject.subscribe(onNext: { [unowned self] in
-            let index = IndexPath(row: self.dataArr.count - 1, section: 0)
-            self.dataArr.append($0)
-            self.tableView.insertRows(at: [index], with: .automatic)
-        }).disposed(by: disposeBag)
+        vm.subject
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] in
+                self.dataArr.append($0)
+                let index = IndexPath(row: self.dataArr.count - 1, section: 0)
+                self.tableView.insertRows(at: [index], with: .automatic)
+            }).disposed(by: disposeBag)
         setNavigationView()
     }
     
     @objc func reloadData(){
-        _ = Observable<Int>.interval(0.01, scheduler: MainScheduler.instance)
+        _ = Observable<Int>.interval(.milliseconds(10), scheduler: MainScheduler.instance)
             .take(self.dataArr.count)
             .map{ _ -> Int in return 0 }
             .subscribe(onNext: { [unowned self] num in

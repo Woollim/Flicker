@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+*.moved-aside
+*.hmap
+*.ipa
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+.package.resolved
+Flicker.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
+
+# CocoaPods (잔재 방지)
+Pods/
+
+# Tuist (프로젝트 파일은 tuist generate로 생성)
+*.xcodeproj
+*.xcworkspace
+Derived/
+.tuist/

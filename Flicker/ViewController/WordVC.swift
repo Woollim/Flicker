@@ -24,9 +24,11 @@ class WordVC: UIViewController{
         super.viewDidLoad()
         initView()
         vm = WordVM(buttonSize)
-        vm.subject.subscribe(onNext: { [unowned self] in 
-            self.createButton($0.0, x: $0.1.x, y: $0.1.y)
-        }).disposed(by: disposeBag)
+        vm.subject
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] in
+                self.createButton($0.0, x: $0.1.x, y: $0.1.y)
+            }).disposed(by: disposeBag)
     }
     
     override func viewDidLayoutSubviews() {

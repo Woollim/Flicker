@@ -105,7 +105,7 @@ extension MainVC{
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             _ = Observable.just(initDataArr[indexPath.row])
                 .bind(to: Realm.rx.delete())
@@ -116,7 +116,7 @@ extension MainVC{
 
 extension UIAlertController{
     
-    func setAction(_ title: String, style: UIAlertActionStyle, fun: ((UIAlertAction) -> Swift.Void)? = nil){
+    func setAction(_ title: String, style: UIAlertAction.Style, fun: ((UIAlertAction) -> Swift.Void)? = nil){
         self.addAction(UIAlertAction(title: title, style: style, handler: fun))
     }
     

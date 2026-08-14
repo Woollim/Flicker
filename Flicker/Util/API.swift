@@ -40,12 +40,12 @@ extension API: TargetType{
         return "".data(using: .utf8)!
     }
     
-    var task: Task {
-        return Task.requestPlain
+    var task: Moya.Task {
+        return Moya.Task.requestPlain
     }
-    
+
     var headers: [String : String]? {
-        if case API.getNews(_) = self{
+        if case .getNews = self{
             return ["X-Naver-Client-Id" : "MZOETpAGCVBGuheQ85h4", "X-Naver-Client-Secret" : "it5ryrxT6K"]
         }else{
             return nil
